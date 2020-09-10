@@ -1,3 +1,13 @@
+
+/*
+Using constant vars for all my divs and span
+values so we dont have to call them many times.
+User Score and Computer Score are not constant because
+they need to be update during the game.
+
+*/
+
+
 let usrScore = 0;
 let compScore = 0;
 const usrScore_span = document.getElementById("user-score");
@@ -9,12 +19,25 @@ const paper_div = document.getElementById('p');
 const scissors_div = document.getElementById('s');
 
 
+
+/*
+This function store an array that represents
+Rock(r) Paper(p) and Scissors(s)
+then we call the math class to to randomize through the array
+so it can call the computers choice
+*/
 function getComputerChoice() {
   const choices = ['r','p','s'];
   const randomNum = Math.floor(Math.random() * 3);
   return choices[randomNum];
 
 }
+
+/*
+This functions converts the basic letters
+into what they actually represent
+
+*/
 
 function convertToWord(letter) {
   if (letter === "r" ) return "Rock";
@@ -24,6 +47,15 @@ function convertToWord(letter) {
 
 
 }
+
+/*
+This functions is in charge of the winning operation
+for the player. It up dates the players score each time they win.
+it also displays a small tag to notify what the player chose and
+what the compuer chose. As well as calling a "green glow" class that
+glows green around the players selection when they win the round.
+*/
+
 
 function win(userChoice, computerChoice) {
   usrScore++;
@@ -39,7 +71,13 @@ function win(userChoice, computerChoice) {
 
 }
 
-
+/*
+This functions is in charge of the losing operation
+for the player. It up dates the computers score each time the player loses.
+it also displays a small tag to notify what the player chose and
+what the compuer chose. As well as calling a "red glow" class that
+glows red around the players selection when they lose the round.
+*/
 
 function lose(userChoice, computerChoice) {
   compScore++;
@@ -67,7 +105,12 @@ function draw(userChoice,computerChoice) {
 }
 
 
+/*
+This function is in charge of all the potential outcomes
+of the match by using a switch statement and calling the
+proper function.
 
+*/
 function game(userChoice) {
   const computerChoice = getComputerChoice();
   switch (userChoice + computerChoice) {
