@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: #292C34;
+}
+
+header{
+    background: white;
+    padding: 25px;
+}
+
+
+header > h1{
+    color: #25272E;
+    text-align: center;
+    font-family: Asap, sans-serif;
+
+}
+
+.score-board{
+    margin: 20px auto;
+    border: 3px solid white;
+    border-radius: 4px;
+    text-align: center;
+    width: 200px;
+    color: white;
+    font-size: 45px;
+    padding: 15px 20px;
+    position: relative;
+
+}
+
+.badge{
+    color: white;
+    background: #E25840;
+    font-size: 14px;
+    padding: 2px 10px;
+    font-family: Asap, sans-serif;
+}
+
+#user-label{
+    position: absolute;
+    top: 30px;
+    left: -25px;
+}
+
+#user-comp{
+    position: absolute;
+    top: 30px;
+    right: -30px;
+}
+
+.result{
+    font-size: 30px;
+    color: aliceblue;
+
+
+}
+
+.result > p{
+    text-align: center;
+    font-weight: bold;
+    font-family: Asap, sans-serif;
+
+}
+
+
+.choices{
+    margin: 50px 0px;
+    text-align: center;
+
+}
+
+.choice{
+    border: 4px solid white;
+    border-radius: 50%;
+    margin: 0 15px;
+    padding: 15px;
+    display:inline-block;
+    transition: all 0.3s ease;
+
+
+}
+
+.choice:hover{
+    cursor: pointer;
+    background: #E25840;
+}
+
+
+#action-message{
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: Asap. sans-serif;
+    color: aliceblue;
+
+}
+
+.green-glow{
+  border: 4px solid #4dcc7d;
+  box-shadow: 0 0 10px #31b43a;
+
+}
+
+.red-glow{
+  border: 4px solid #fc121b;
+  box-shadow: 0 0 10px #d01115;
+
+}
+
+.gray-glow{
+  border: 4px solid #464647;
+  box-shadow: 0 0 10px #25292b;
+
+}
